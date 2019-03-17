@@ -1,6 +1,7 @@
 package com.example.databindingexample;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         public void onCancelButtonClicked(View view)
         {
             Toast.makeText(context,"Cancel Button Clicked",Toast.LENGTH_SHORT).show();
+        }
+        public void onButton3Clicked(View view)
+        {
+            startActivity(new Intent(MainActivity.this,IncludeLayoutActivity.class));
         }
 
     }
