@@ -1,5 +1,6 @@
 package com.example.databindingexample;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,7 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.databindingexample.databinding.ActivityIncludeLayoutBinding;
+
 public class IncludeLayoutActivity extends AppCompatActivity {
+    private ActivityIncludeLayoutBinding activityIncludeLayoutBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,8 @@ public class IncludeLayoutActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        activityIncludeLayoutBinding= DataBindingUtil.setContentView(IncludeLayoutActivity.this,R.layout.activity_include_layout);
+        activityIncludeLayoutBinding.setStudent(getCurrentStudent());
 
     }
     private Student getCurrentStudent(){

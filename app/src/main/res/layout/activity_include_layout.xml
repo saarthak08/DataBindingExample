@@ -31,7 +31,8 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_include_layout" />
+    <include layout="@layout/content_include_layout"
+        bind:student="@{student}"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
