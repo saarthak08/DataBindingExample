@@ -16,13 +16,25 @@
         tools:showIn="@layout/activity_include_layout">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="214dp"
-            android:layout_height="95dp"
-            android:layout_marginTop="257dp"
-            android:text="@{student.studentEmail}"
+            android:id="@+id/textView2"
+            android:layout_width="211dp"
+            android:layout_height="69dp"
+            android:layout_marginBottom="461dp"
+            android:text="@{student.studentName}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="343dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@={student.studentName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </layout>
